@@ -1,5 +1,5 @@
 import BaseClockElement from "./components/BaseClockElement";
-import { ElementRotation } from "./types/ElementRotation";
+import { ElementPosition } from "./enums/ElementPosition";
 
 class App {
     private readonly domContainer: HTMLElement | null;
@@ -12,11 +12,9 @@ class App {
         const {domContainer} = this;
 
         if (domContainer) {
-            domContainer.appendChild(new BaseClockElement(ElementRotation.HORIZONTAL).render());
-            domContainer.appendChild(new BaseClockElement(ElementRotation.VERTICAL).render());
-            domContainer.appendChild(new BaseClockElement(ElementRotation.VERTICAL).render());
-            domContainer.appendChild(new BaseClockElement(ElementRotation.VERTICAL).render());
-            domContainer.appendChild(new BaseClockElement(ElementRotation.HORIZONTAL).render());
+            domContainer.appendChild(new BaseClockElement(ElementPosition.TOP).render());
+            domContainer.appendChild(new BaseClockElement(ElementPosition.BOTTOM).render());
+            domContainer.appendChild(new BaseClockElement(ElementPosition.LEFT_TOP).render());
         }
     }
 }

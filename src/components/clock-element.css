@@ -3,7 +3,7 @@
     height: 10px;
     width: 40px;
     background-color: red;
-    position: relative;
+    position: absolute;
 }
 
 .clock-element--vertical {
@@ -12,6 +12,16 @@
 
 .clock-element--horizontal {
     transform: rotate(0deg);
+}
+
+.clock-element--left-top {
+    transform: rotate(90deg);
+    left: -10px;
+    top: 40px;
+}
+
+.clock-element--bottom {
+    top: 60px;
 }
 
 .arrow-right {
